@@ -4,7 +4,6 @@ channels:
 dependencies:
 - fsspec
 - jupyterlab
-- langchain
 - numpy
 - openai
 - openpyxl
@@ -13,7 +12,7 @@ dependencies:
 - python-dotenv
 - python-duckdb
 - scipy
-- streamlit
+- streamlit>=1.20.0
 - pip
 - pip:
     - clevercsv

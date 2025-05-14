@@ -1,16 +1,12 @@
-# This tool is now no longer being updated on this github repository, please see the up-to-date version of this tool from the repository that this is forked from [here](https://github.com/csag-uct/Metadata-Harmonisation-Tool)
+# Data Harmonisation Tool
 
-# Metadata Harmonisation Tool
+This is a [streamlit](https://streamlit.io) application we have constructed that facilitates the matching of variable names in a dataset to that of a target codebook. The first and often most tedious step in developing a common data model. 
 
-This is a [streamlit](https://streamlit.io) application we have constructed that facilitates the matching of variables variables names in a dataset to that of a target codebook. The first and often most tedious step in developing a common data model. 
-
-![GUI screenshot](GUI.png)
-
-#### A video demonstration is avaliable [here](https://drive.google.com/file/d/1fLhKLtDvA_02pvjJYkFjXyDobZA4Y6V8/view?usp=sharing)
+![GUI screenshot](new_demo.gif)
 
 ## What it does:
 
-The Metadata Harmonisation Interface provides a convenient portal to match variables from an incoming dataset to a target set of ontologies. In this way the tool provides a similar role to that of the [White Rabbit tool](https://github.com/OHDSI/WhiteRabbit) utilised by the OHDSI community. This tool differentiates itself by using Large Language Models to generate variable descriptions where none have been provided and by recommending the most likely target variable to map to. A confidence indication is provided alongside mapping recommendations. This dramatically speeds up the mapping process.
+The Metadata Harmonisation Interface provides a convenient portal to match variables from an incoming dataset to a target set of ontologies. In this way the tool provides a similar role to that of the [White Rabbit tool](https://github.com/OHDSI/WhiteRabbit) utilised by the OHDSI community. This tool differentiates itself by using Large Language Models to generate variable descriptions where none have been provided, recommending the most likely target variable to map to as well as supporting creation and testing of variable transformation instructions. A confidence indication is provided alongside mapping recommendations. This dramatically speeds up the mapping process.
 
 ## How to use it: 
 
@@ -43,14 +39,14 @@ git clone git@github.com:csag-uct/Health_Data_Harmonisation_Platform.git
 
 cd Health_Data_Harmonisation_Platform
 
-conda env create -f environment.yml -c conda-forge
+conda env create -f environment.yml
 conda activate harmonisation_env
 
 pip install -r requirements.txt # some packages not available on conda channels
 
 cd app/
 
-streamlit run mapping_interface.py
+streamlit run app.py
 ```
 The app will then be accessible from your browser at [localhost:8501/](localhost:8501/) 
 

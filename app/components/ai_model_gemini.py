@@ -12,7 +12,8 @@ class GeminiAIModel(AIModel):
     def __init__(self, config):
         super().__init__(config)
         self.ai_client = None
-        self.embedding_model = "gemini-embedding-exp-03-07"
+        # self.embedding_model = "gemini-embedding-exp-03-07"
+        self.embedding_model = "text-embedding-004"
         self.chat_model = "gemini-2.0-flash"
 
 

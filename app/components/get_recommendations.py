@@ -34,7 +34,10 @@ def embed_study(ai_model : AIModel, study):
         study (str): The study name.
     """
     df = pd.read_csv(f'{input_path}/{study}/dataset_variables_auto_completed.csv')[['variable_name','description']]
+    print(df['variable_name'])
     df["var_embeddings"] = ai_model.get_embeddings(df['variable_name']) # type: ignore
+    print(df['description'])
+    df['description'] = df['description'].fillna(' ')
     df["description_embeddings"] = ai_model.get_embeddings(df['description']) # type: ignore
 
     df.to_csv(f'{input_path}/{study}/dataset_variables_with_embeddings.csv', index=False)
